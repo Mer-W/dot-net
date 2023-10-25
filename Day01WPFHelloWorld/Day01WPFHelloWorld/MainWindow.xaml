@@ -1,0 +1,16 @@
+﻿<Window x:Class="Day01WPFHelloWorld.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day01WPFHelloWorld"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="186" Width="471">
+    <Grid>
+        <Label Content="What is your name?" HorizontalAlignment="Left" Margin="25,23,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TbxName" HorizontalAlignment="Left" Margin="315,27,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Click="BtnHelloLabel_Click" x:Name="BtnHelloLabel" Content="Say Hello with label" HorizontalAlignment="Left" Margin="17,10,0,0" VerticalAlignment="Center" Width="150"/>
+        <Button Click="BtnHelloMessageBox_Click" x:Name="BtnHelloMessageBox" Content="Say Hello with message box" HorizontalAlignment="Left" Margin="210,10,0,0" VerticalAlignment="Center" Width="150"/>
+        <Label x:Name="LblGreeting" Content="..." HorizontalAlignment="Left" Margin="53,135,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
