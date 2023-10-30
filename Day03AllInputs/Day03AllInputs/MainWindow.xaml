@@ -1,0 +1,36 @@
+﻿<Window x:Class="Day03AllInputs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Day03AllInputs"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="293" Width="644">
+    <Grid x:Name="GridMain">
+        <Label x:Name="LblName" Content="Name: " HorizontalAlignment="Left" Margin="43,21,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="TbxName" HorizontalAlignment="Left" Margin="133,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="LblAge" Content="Age: " HorizontalAlignment="Left" Margin="53,47,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="RbnUnder18" GroupName="RbnAge" Content="under 18" HorizontalAlignment="Left" Margin="133,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.098,-0.879" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="Rbn18to35" GroupName="RbnAge" Content="18-35" HorizontalAlignment="Left" Margin="231,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.098,-0.879" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="RbnOver35" GroupName="RbnAge" Content="over 35" HorizontalAlignment="Left" Margin="322,53,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.098,-0.879" Checked="RadioButton_Checked"/>
+        <Label x:Name="LblPets" Content="Pets:" HorizontalAlignment="Left" Margin="54,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.56,1.134"/>
+        <CheckBox x:Name="CbxCat" Content="cat" HorizontalAlignment="Left" Margin="133,78,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CbxDog" Content="dog" HorizontalAlignment="Left" Margin="193,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.564,-0.349"/>
+        <CheckBox x:Name="CbxOther" Content="other" HorizontalAlignment="Left" Margin="256,78,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.564,-0.349"/>
+        <Label x:Name="LblContinent" Content="Continent of residence:" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.56,1.134"/>
+        <Label x:Name="LblTemp" Content="Preferred temperature:" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.56,1.134"/>
+        <Slider x:Name="SldrTemp" IsSnapToTickEnabled="True" Minimum="15" Maximum="35" TickFrequency="1" HorizontalAlignment="Left" Margin="202,164,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="BtnRegister" Click="BtnRegister_Click" Content="Register" HorizontalAlignment="Left" Margin="231,222,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="LblResult" Content="..." HorizontalAlignment="Left" Margin="548,80,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CmbContinent" SelectedValuePath="Content" HorizontalAlignment="Left" Margin="202,125,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem>North America</ComboBoxItem>
+            <ComboBoxItem>South America</ComboBoxItem>
+            <ComboBoxItem>Europe</ComboBoxItem>
+            <ComboBoxItem>Africa</ComboBoxItem>
+            <ComboBoxItem>Asia</ComboBoxItem>
+            <ComboBoxItem>Oceania</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="LblSlider" Content="{Binding ElementName=SldrTemp, Path=Value, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" Margin="364,160,0,0" VerticalAlignment="Top"/>
+        <Label Content="C" HorizontalAlignment="Left" Margin="387,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.709,0.464"/>
+    </Grid>
+</Window>

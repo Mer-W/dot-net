@@ -1,0 +1,6 @@
+Name: Jerry
+Age: Over 35
+Continent: North America
+Pets: dog; other; 
+Temperature: 25
+
